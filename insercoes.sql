@@ -69,3 +69,21 @@ VALUES
 ('000005', 920.00, '2026-04-07', 'Pix', '0001', '55910432087'),
 ('000006', 920.00, '2026-04-08', 'Pix', '0001', '48433296060');
 
+
+ALTER TABLE planos ADD COLUMN nomeplano VARCHAR(25);
+
+UPDATE planos
+SET nomeplano = 'Plano mensal'
+WHERE idplano = 1;
+
+UPDATE planos
+SET nomeplano = 'Plano trimestral'
+WHERE idplano = 2;
+
+UPDATE planos
+SET nomeplano = 'Plano semestral'
+WHERE idplano = 3;
+
+UPDATE planos
+SET nomeplano = 'Plano anual'
+WHERE idplano = 4;
