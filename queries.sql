@@ -45,3 +45,21 @@ FROM matriculas m
 JOIN alunos a ON m.idaluno = a.idaluno
 JOIN planos p ON m.idplano = p.idplano
 WHERE p.duracao = 12;
+
+SELECT p.nomeplano, SUM(valor) AS faturamento_total
+FROM pagamento pg
+JOIN matriculas m ON pg.idmatricula = m.idmatricula
+JOIN planos p ON m.idplano = p.idplano
+GROUP BY p.nomeplano;
+
+CREATE VIEW vw_relatorio AS
+SELECT a.nomecliente, p.nomeplano, TO_CHAR(datainicio, 'YYYY-MM-DD') AS datainicio, TO_CHAR(datafim, 'YYYY-MM-DD') AS datafim
+FROM alunos a
+JOIN matriculas m ON a.idaluno = m.idaluno
+JOIN planos p ON m.idplano = p.idplano;
+
+SELECT a.nomecliente AS alunos_sem_personal
+FROM matriculas m
+JOIN alunos a ON M.idaluno = a.idaluno
+LEFT JOIN funcionarios f ON m.idpersonal = f.idfuncionario
+WHERE m.idpersonal IS NULL
