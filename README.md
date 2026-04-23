@@ -19,6 +19,8 @@ Funcionalidades
 1. Criar o banco de dados
 2. Executar o arquivo schema.sql
 3. Executar o arquivo inserts.sql
+4. Executar as consultas presentes em views.sql
+4. Executar as consultas presentes em functions.sql
 4. Executar as consultas presentes em queries.sql
 
 ## Estrutura do Banco de Dados
