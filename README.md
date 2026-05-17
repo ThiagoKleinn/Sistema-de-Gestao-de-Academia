@@ -32,3 +32,5 @@ Tabelas principais:
 - funcionarios: funcionários da academia
 - matriculas: associação entre alunos e planos
 - pagamento: registros de pagamentos realizados
+
+<img width="1536" height="1024" alt="diagrama-banco (1)" src="https://github.com/user-attachments/assets/1555380f-e32d-4655-8c24-380f59d788ff" />
